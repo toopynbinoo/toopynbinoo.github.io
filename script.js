@@ -49,7 +49,6 @@ class SlidingPuzzle {
 
       let windowResizeTimeout;
       window.addEventListener('resize', () => {clearTimeout(windowResizeTimeout); windowResizeTimeout = setTimeout(() => {this.sizeTiles(this.nx, this.ny)}, 250)});
-      window.addEventListener('orientationchange', () => {clearTimeout(windowResizeTimeout); windowResizeTimeout = setTimeout(() => {this.sizeTiles(this.nx, this.ny)}, 250)});
 
       puzzleElement.style.display = "block";
       puzzleElement.append(this.htmlForBoard);
